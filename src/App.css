@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f0c14b;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('images/image.png') center/cover no-repeat;
+  height: 70vh;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f0c14b;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Courses Section */
+.courses-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.courses-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.course-category {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+
+.course-card {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+  border-radius: 5px;
+}
+
+.course-card h4 {
+  margin: 15px 0 10px;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .courses-grid {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .course-category {
+    flex-basis: 100%;
   }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+    }
+  
+    .nav-menu.open .nav-links {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
 }
