@@ -115,7 +115,7 @@ const App = () => {
       <section id="contact" className="contact-section">
         <h2>Contact Us</h2>
         <p>Email: info@eksipnos.in</p>
-        <p>Phone: +91 7259365660</p>
+        <p>Phone: +91 9901215660</p>
         <p>Get in touch for <strong>free counseling</strong> to help choose the right course for your career growth!</p>
       </section>
 
